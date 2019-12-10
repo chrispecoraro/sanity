@@ -1,0 +1,86 @@
+.root {
+}
+
+.selectedUserList {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.emptyUserList {
+  composes: selectedUserList;
+  padding: 0.5em;
+}
+
+.search {
+  padding: 0.5em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.5em;
+}
+
+.menuButton {
+  -webkit-font-smoothing: inherit;
+  -webkit-appearance: none;
+  display: block;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+
+  @nest & > div {
+    padding: 0.5em 0.75em;
+    outline: none;
+  }
+
+  @nest &:hover > div {
+    background: #def;
+  }
+}
+
+.menuItem {
+  -webkit-font-smoothing: inherit;
+  -webkit-appearance: none;
+  display: block;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+
+  @nest & > div {
+    padding: 0.5em 0.75em;
+    outline: none;
+  }
+
+  @nest &:hover > div {
+    background: #def;
+  }
+}
+
+.userOption {
+  display: flex;
+  align-items: center;
+}
+
+.userCheckbox {
+  width: 1em;
+  margin-right: 0.75em;
+}
+
+.userCard {
+  flex: 1;
+}

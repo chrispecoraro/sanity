@@ -1,0 +1,28 @@
+.root {
+  position: relative;
+  width: calc(1.5em + 3px);
+  height: calc(1.5em + 3px);
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  margin: -1px 0 -1px -1px;
+
+  @nest & img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @nest &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100%);
+    height: calc(100%);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    top: 0.5px;
+    left: 0.5px;
+    border-radius: 50%;
+  }
+}
